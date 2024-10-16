@@ -71,6 +71,6 @@ jobs:
         run: docker push ${{ steps.create_tag.outputs.full_image_tags }}
       
       - name: Echo output
-        run: echo ${{ steps.tag.outputs.image_name }}
+        run: echo ${{ needs.ci_test.outputs.image_name }}
   
      
